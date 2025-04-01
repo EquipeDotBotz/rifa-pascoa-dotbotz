@@ -4,20 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rifa de Páscoa DotBotz 2025</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('https://i.imgur.com/zq3pG7W.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .progress-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .progress-bar {
+            height: 30px;
+            width: 0%;
+            background-color: green;
+            border-radius: 10px;
+        }
+
+        h1, h2 {
+            font-size: 2.5em;
+        }
+
+        .value {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
         <h1>Rifa de Páscoa DotBotz 2025</h1>
-        <div class="barra-container">
-            <div class="barra" id="barra"></div>
+        <h2>Progresso da Arrecadação</h2>
+
+        <!-- Barra de Progresso -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
         </div>
-        <div class="informacoes">
-            <p>1ª Meta: R$ <span id="meta">1000</span></p> <!-- Alterado para "1ª Meta: R$ 1000" -->
-            <p>Valor Arrecadado: R$ <span id="valor-arrecadado">0</span></p>
-            <input type="number" id="valor-input" placeholder="Digite o valor arrecadado" oninput="atualizarProgresso()">
+
+        <div class="value">
+            <p>Meta: 1ª Meta: R$ 1.000,00</p>
+            <p>Valor Arrecadado: R$ <span id="arrecadado">0</span></p>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        // Variável do valor arrecadado (somente você pode alterar este valor)
+        let arrecadado = 600;  // Defina o valor arrecadado aqui diretamente no código (por exemplo, R$ 600)
+        const meta = 1000;  // Valor da meta
+        const progressBar = document.getElementById('progress-bar');
+        const valorArrecadado = document.getElementById('arrecadado');
+
+        // Função para atualizar a barra de progresso e o valor arrecadado
+        function atualizarProgresso() {
+            // Atualiza o valor exibido na tela
+            valorArrecadado.textContent = arrecadado.toFixed(2);
+
+            // Calcula o percentual de progresso
+            const progresso = (arrecadado / meta) * 100;
+            progressBar.style.width = `${progresso}%`;
+        }
+
+        // Chama a função para atualizar a barra de progresso
+        atualizarProgresso();
+    </script>
+
 </body>
 </html>
