@@ -37,18 +37,13 @@
         }
 
         /* Títulos com borda preta e texto destacado */
-        h1 {
-            font-size: 3.5em; /* Aumenta o tamanho do título principal */
+        h1, h2 {
+            font-size: 3em; /* Aumenta o tamanho das fontes */
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adiciona sombra para destacar os textos */
-            margin: 0 0 20px 0; /* Aumenta o espaço abaixo do título */
+            margin: 10px 0;
+            border-bottom: 2px solid white; /* Borda abaixo dos títulos */
+            padding-bottom: 10px;
             text-align: center;
-            -webkit-text-stroke: 2px black; /* Contorno preto nas letras */
-        }
-
-        h2 {
-            font-size: 2.5em; /* Aumenta o tamanho do subtítulo */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adiciona sombra para destacar os textos */
-            margin: 0; /* Remove a margem abaixo */
             -webkit-text-stroke: 2px black; /* Contorno preto nas letras */
         }
 
@@ -96,7 +91,7 @@
         </div>
 
         <div class="value">
-            <p>1ª Meta: R$ 1.000,00</p>
+            <p>Meta: 1ª Meta: R$ 1.000,00</p>
             <p>Valor Arrecadado: R$ <span id="arrecadado">0</span></p>
         </div>
     </div>
