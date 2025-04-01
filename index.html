@@ -7,8 +7,12 @@
 
     <!-- CSS embutido -->
     <style>
-        /* Fundo preto para a página */
+        /* Fundo preto e configuração de flexbox para centralizar */
         body {
+            display: flex; /* Usando Flexbox */
+            justify-content: center; /* Alinha horizontalmente */
+            align-items: center; /* Alinha verticalmente */
+            height: 100vh; /* Altura da tela */
             background-color: black; /* Fundo preto */
             background-image: url('https://i.imgur.com/zq3pG7W.png');
             background-size: 50%; /* Reduz a imagem para 50% do seu tamanho original */
@@ -17,6 +21,7 @@
             background-attachment: fixed; /* A imagem ficará fixa enquanto rola a página */
             color: white;
             font-family: Arial, sans-serif;
+            margin: 0; /* Remove qualquer margem da página */
         }
 
         .container {
