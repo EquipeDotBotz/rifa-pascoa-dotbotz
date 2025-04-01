@@ -27,17 +27,30 @@
             justify-content: center; /* Alinha os itens no centro verticalmente */
         }
 
+        /* Container de conteúdo */
         .container {
             text-align: center;
             padding: 20px;
+            border: 3px solid black; /* Borda preta em volta de todo o conteúdo */
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro para o container */
+        }
+
+        h1, h2 {
+            font-size: 3em; /* Aumenta o tamanho das fontes */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adiciona sombra para destacar os textos */
+            margin: 10px 0;
+            border-bottom: 2px solid white; /* Borda abaixo dos títulos */
+            padding-bottom: 10px;
         }
 
         .progress-container {
             width: 80%;
             margin: 20px auto;
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente preto */
+            background-color: #333; /* Barra de progresso com fundo opaco e escuro */
             border-radius: 20px;
             padding: 10px;
+            border: 2px solid black; /* Borda preta ao redor da barra */
         }
 
         .progress-bar {
@@ -47,13 +60,16 @@
             border-radius: 10px;
         }
 
-        h1, h2 {
-            font-size: 2.5em;
-        }
-
         .value {
             font-size: 1.5em;
-            margin-top: 10px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para destacar o texto */
+        }
+
+        .value p {
+            border: 2px solid white; /* Borda branca ao redor das informações */
+            padding: 10px;
+            border-radius: 10px;
         }
     </style>
 </head>
