@@ -36,14 +36,26 @@
             background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro para o container */
         }
 
+        /* Títulos e textos sem efeito 3D */
         h1, h2 {
             font-size: 3em; /* Aumenta o tamanho das fontes */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adiciona sombra para destacar os textos */
             margin: 10px 0;
             border-bottom: 2px solid white; /* Borda abaixo dos títulos */
             padding-bottom: 10px;
+            color: white; /* Texto simples e sem contorno */
         }
 
+        /* Fontes mais destacadas e menos finas para Meta e Arrecadado (sem 3D) */
+        .value p {
+            font-size: 2em; /* Tamanho maior para os valores */
+            font-weight: bold; /* Torna o texto mais forte */
+            border: 2px solid white; /* Borda branca ao redor das informações */
+            padding: 10px;
+            border-radius: 10px;
+            color: white; /* Garante que a cor do texto seja branca */
+        }
+
+        /* Barra de progresso com fundo opaco */
         .progress-container {
             width: 80%;
             margin: 20px auto;
@@ -60,17 +72,6 @@
             border-radius: 10px;
         }
 
-        .value {
-            font-size: 1.5em;
-            margin-top: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para destacar o texto */
-        }
-
-        .value p {
-            border: 2px solid white; /* Borda branca ao redor das informações */
-            padding: 10px;
-            border-radius: 10px;
-        }
     </style>
 </head>
 <body>
@@ -85,7 +86,7 @@
         </div>
 
         <div class="value">
-            <p>Meta: 1ª Meta: R$ 1.000,00</p>
+            <p>1ª Meta: R$ 1.000,00</p>
             <p>Valor Arrecadado: R$ <span id="arrecadado">0</span></p>
         </div>
     </div>
