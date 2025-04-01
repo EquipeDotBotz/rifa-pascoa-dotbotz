@@ -37,85 +37,15 @@
         }
 
         /* Títulos com borda preta e texto destacado */
-        h1, h2 {
-            font-size: 3em; /* Aumenta o tamanho das fontes */
+        h1 {
+            font-size: 3.5em; /* Aumenta o tamanho do título principal */
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adiciona sombra para destacar os textos */
-            margin: 10px 0;
-            border-bottom: 2px solid white; /* Borda abaixo dos títulos */
-            padding-bottom: 10px;
+            margin: 0 0 20px 0; /* Aumenta o espaço abaixo do título */
             text-align: center;
             -webkit-text-stroke: 2px black; /* Contorno preto nas letras */
         }
 
-        /* Barra de progresso com fundo opaco */
-        .progress-container {
-            width: 80%;
-            margin: 20px auto;
-            background-color: #333; /* Barra de progresso com fundo escuro */
-            border-radius: 20px;
-            padding: 10px;
-            border: 2px solid black; /* Borda preta ao redor da barra */
-        }
-
-        .progress-bar {
-            height: 30px;
-            width: 0%;
-            background-color: green;
-            border-radius: 10px;
-        }
-
-        /* Informações de valor (meta e arrecadado) com contorno */
-        .value {
-            font-size: 1.5em;
-            margin-top: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para destacar o texto */
-        }
-
-        .value p {
-            border: 2px solid white; /* Borda branca ao redor das informações */
-            padding: 10px;
-            border-radius: 10px;
-            -webkit-text-stroke: 2px black; /* Contorno preto nas letras */
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>Rifa de Páscoa DotBotz 2025</h1>
-        <h2>Progresso da Arrecadação</h2>
-
-        <!-- Barra de Progresso -->
-        <div class="progress-container">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
-
-        <div class="value">
-            <p>Meta: 1ª Meta: R$ 1.000,00</p>
-            <p>Valor Arrecadado: R$ <span id="arrecadado">0</span></p>
-        </div>
-    </div>
-
-    <script>
-        // Variável do valor arrecadado (somente você pode alterar este valor)
-        let arrecadado = 600;  // Defina o valor arrecadado aqui diretamente no código (por exemplo, R$ 600)
-        const meta = 1000;  // Valor da meta
-        const progressBar = document.getElementById('progress-bar');
-        const valorArrecadado = document.getElementById('arrecadado');
-
-        // Função para atualizar a barra de progresso e o valor arrecadado
-        function atualizarProgresso() {
-            // Atualiza o valor exibido na tela
-            valorArrecadado.textContent = arrecadado.toFixed(2);
-
-            // Calcula o percentual de progresso
-            const progresso = (arrecadado / meta) * 100;
-            progressBar.style.width = `${progresso}%`;
-        }
-
-        // Chama a função para atualizar a barra de progresso
-        atualizarProgresso();
-    </script>
-
-</body>
-</html>
+        h2 {
+            font-size: 2.5em; /* Aumenta o tamanho do subtítulo */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adiciona sombra para destacar os textos */
+            margin:
