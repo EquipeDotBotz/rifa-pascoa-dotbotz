@@ -62,11 +62,12 @@
             background-color: green;
             border-radius: 10px;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: center; /* Centraliza horizontalmente o texto */
+            align-items: center; /* Centraliza verticalmente o texto */
             color: white;
             font-size: 1.5em;
             font-weight: bold;
+            text-align: center; /* Garante que o texto fique centralizado */
         }
 
         /* Fontes mais destacadas e menos finas para Meta e Arrecadado (sem 3D) */
@@ -101,7 +102,6 @@
         let arrecadado = 600;  // Defina o valor arrecadado aqui diretamente no código (por exemplo, R$ 600)
         const meta = 1000;  // Valor da meta
         const progressBar = document.getElementById('progress-bar');
-        const valorArrecadado = document.getElementById('arrecadado');
 
         // Função para atualizar a barra de progresso e o valor arrecadado
         function atualizarProgresso() {
