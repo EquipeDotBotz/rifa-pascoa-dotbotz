@@ -63,15 +63,18 @@
             position: absolute;
             top: 0;
             left: 0;
-            display: flex;
-            justify-content: center; /* Centraliza horizontalmente o texto dentro da parte verde */
-            align-items: center; /* Centraliza verticalmente o texto */
+            width: 0%; /* Inicialmente a largura é 0% */
+        }
+
+        /* Centralizar o texto dentro da barra de progresso */
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centraliza o texto tanto horizontal quanto verticalmente */
             color: white;
             font-size: 1.5em;
             font-weight: bold;
-            text-align: center; /* Garante que o texto fique centralizado */
-            padding: 0 10px; /* Dá um pouco de espaço nas laterais da barra */
-            position: absolute;
         }
 
         /* Fontes mais destacadas e menos finas para Meta e Arrecadado (sem 3D) */
@@ -93,7 +96,8 @@
 
         <!-- Barra de Progresso -->
         <div class="progress-container">
-            <div class="progress-bar" id="progress-bar">R$ 0,00 / R$ 1.000,00</div>
+            <div class="progress-bar" id="progress-bar"></div>
+            <div class="progress-text" id="progress-text">R$ 0,00 / R$ 1.000,00</div> <!-- Texto centralizado -->
         </div>
 
         <div class="value">
@@ -106,11 +110,12 @@
         let arrecadado = 600;  // Defina o valor arrecadado aqui diretamente no código (por exemplo, R$ 600)
         const meta = 1000;  // Valor da meta
         const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
 
         // Função para atualizar a barra de progresso e o valor arrecadado
         function atualizarProgresso() {
-            // Atualiza o texto na barra de progresso
-            progressBar.textContent = `R$ ${arrecadado.toFixed(2)} / R$ ${meta.toFixed(2)}`;
+            // Atualiza o texto dentro da barra de progresso
+            progressText.textContent = `R$ ${arrecadado.toFixed(2)} / R$ ${meta.toFixed(2)}`;
 
             // Calcula o percentual de progresso
             const progresso = (arrecadado / meta) * 100;
