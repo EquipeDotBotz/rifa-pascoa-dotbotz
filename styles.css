@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black; /* Fundo preto atrás da imagem */
+    background-image: url('https://i.imgur.com/zq3pG7W.png'); /* Link da imagem fornecida */
+    background-size: 70%; /* Diminui o tamanho da imagem para 70% da largura da tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Imagem fixa ao rolar */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para contraste */
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.barra-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin: 20px 0;
+    height: 30px;
+    overflow: hidden;
+}
+
+.barra {
+    height: 100%;
+    background-color: rgba(76, 175, 80, 0.7); /* Cor verde com transparência */
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+}
+
+.informacoes p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
